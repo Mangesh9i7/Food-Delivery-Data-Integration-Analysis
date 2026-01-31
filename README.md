@@ -1,47 +1,42 @@
-🍕 Food Delivery Data Integration & Analysis
-Hi there! This project is all about taking data from different places—like a CSV file, a JSON file, and a SQL database—and bringing them together to find out how a food delivery business is actually doing.
+# 🍕 Food Delivery Data Integration & Analysis
 
-I built this to answer real-world questions like: Which cities spend the most?, Do "Gold" members actually order more?, and Which cuisines are the most popular?
+This project is a complete data analysis workflow that combines data from three different sources to uncover business insights for a food delivery service.
 
-📂 What's in this Repo?
-I’ve included the raw data files so the code has something to work with:
+---
 
-orders.csv: This is the "heart" of the data, containing every single order, the date it happened, and the total bill.
+## 📂 Project Structure
+To keep things organized, the repository includes:
+* **`orders.csv`**: Transactional data (order IDs, dates, and amounts).
+* **`users.json`**: Customer profiles (names, cities, and membership types).
+* **`restaurants.sql`**: Master list of restaurants, cuisines, and ratings.
+* **`Food_Delivery_Analysis.ipynb`**: The main Google Colab notebook containing the Python code.
 
-users.json: This contains info about our customers, like their names, which city they live in, and if they are a "Gold" or "Regular" member.
+---
 
-restaurants.sql: This is a master list of all restaurants, their cuisine types (Italian, Indian, etc.), and their star ratings.
+## 🚀 How to Run the Analysis
+Setting this up is simple and doesn't require any software installation:
 
-Food_Delivery_Analysis.ipynb: This is the main notebook where all the magic happens! It cleans the data, merges it, and calculates all the answers.
+1. **Open Google Colab**: Go to [colab.research.google.com](https://colab.research.google.com).
+2. **Upload the Notebook**: Import the `.ipynb` file from this repository.
+3. **Upload the Data**: 
+   * Click the **Folder icon** on the left sidebar in Colab.
+   * Upload `orders.csv`, `users.json`, and `restaurants.sql`.
+4. **Run All**: Click `Runtime` > `Run all` to see the results.
 
-🚀 How to Set It Up
-You don't need to install a bunch of complicated software. The easiest way to run this is using Google Colab.
+---
 
-Download the files: Download the three data files (orders.csv, users.json, restaurants.sql) and the .ipynb notebook from this repo.
+## 📊 Key Insights Found
+Through the merged dataset, we identified several trends:
+* **Gold Members**: They account for **50%** of all orders.
+* **Top City**: **Chennai** is the highest revenue-generating city for Gold members.
+* **Best Cuisine**: **Mexican** food has the highest Average Order Value.
+* **Quality**: **3,374 orders** were placed at restaurants with a rating of **4.5 or higher**.
+* **Busiest Time**: Revenue peaks during the **3rd Quarter (Q3)**.
 
-Open Google Colab: Go to colab.research.google.com.
+---
 
-Upload the Notebook: Click on File > Upload notebook and select the Food_Delivery_Analysis.ipynb file you just downloaded.
-
-Upload the Data:
-
-On the left sidebar in Colab, click the Folder icon.
-
-Click the Upload icon (the paper with an arrow).
-
-Select orders.csv, users.json, and restaurants.sql from your computer.
-
-Run it!: Just click Runtime > Run all in the top menu.
-
-📈 What did I find?
-After merging the data, I discovered some pretty cool things:
-
-Gold Members are Key: They make up 50% of all orders.
-
-Top City: Chennai is the champion city for revenue, especially among Gold members.
-
-The "Pricey" Choice: Mexican food has the highest average order value.
-
-Quality Matters: People love highly-rated spots; 3,374 orders went to restaurants with a rating of 4.5 or higher.
-
-Best Time to Sell: The 3rd Quarter (July–September) is the busiest time of the year.
+## 🛠️ Tools Used
+* **Python**: For data logic.
+* **Pandas**: For merging CSV and JSON files.
+* **SQLite3**: For processing the SQL restaurant data.
+* **Matplotlib/Seaborn**: For creating the trend charts.
